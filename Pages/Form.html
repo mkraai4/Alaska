@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+ 
+
+    
+
+ 
+
+
+
+</head>
+
+
+<body>
+    <!--Header Navigation-->
+    <nav class="Header-Navigation">
+        <li><a href="../index.html" target="_blank">Home</a></li>
+        <li><a href="../Pages/Juneau.html" target="_blank">Juneau</a></li>
+        <li><a href="../Pages/Anchorage.html" target="_blank">Anchorage</a></li>
+        <li><a href="../Pages/Fairbanks.html" target="_blank">Fairbanks</a></li>
+        
+        <li><a href="../Pages/Form.html" target="_blank">Contact Us</a></li>
+        <li> <a href="../Pages/Sources.html" target="_blank">Sources</a>  </li>
+
+    </nav>
+    
+
+   
+<main>
+<section>
+    <H1 id="title">Contact Us</H1>
+   
+<div class="Contact-Form">
+ <form>
+
+ 
+    <div>
+        
+            <label for="First-name">First Name:</label> </br>
+            <input type="text" id="First-name" name="First-name"> </br>
+            <label for="Last-name">Last Name:</label></br>
+            <input type="text" id="Last-name" name="Last-name"> </br>
+    </div>
+
+    <div>
+    <label for="Email1" class="email-form">Email Address:</label>  </br>
+    <input type="email" id="Email1" name="Email1"> </br>
+    <label for="Email2" class="email-form">Comfirm Email Address:</label> </br> 
+    <input type="email" id="Email2" name="Email2"> </br>
+    <button>Submit</button>
+</div>
+</form>
+
+
+
+
+
+
+</section>
+
+</main>
+</br></br></br>
+    
+<Aside>
+<section>
+<img src="../Images/Contact Us.avif" alt="Contact Us written out in scrabble letters." id="contact-form">
+
+
+</section>
+
+
+</Aside>
+</body>
+</html>
+
+<script>
+    let Email1Input = document.getElementById("Email1");
+    let Email2Input = document.getElementById("Email2");
+
+    function comfirmEmails() {
+        const email1 = Email1Input.value;
+        const email2 = Email2Input.value;
+
+        if (email1 !== email2) {
+            Email2Input.setCustomValidity("Emails do not match");
+        } else {
+            Email2Input.setCustomValidity(""); 
+        }
+    }
+
+    Email1Input.addEventListener("input", comfirmEmails);
+    Email2Input.addEventListener("input", comfirmEmails);
+</script>
